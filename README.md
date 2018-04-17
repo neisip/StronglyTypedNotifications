@@ -100,10 +100,6 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
 ### CocoaPods
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
-use_frameworks!
-
 target '<Your Target Name>' do
     pod 'STNotification', '~> 1.0'
 end
