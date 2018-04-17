@@ -22,11 +22,11 @@
 		E8C1D0F52084F00500E43756 /* STNotificationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0F12084F00500E43756 /* STNotificationFactory.h */; };
 		E8C1D0F62084F00500E43756 /* STNotificationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0F22084F00500E43756 /* STNotificationFactory.m */; };
 		E8C1D0F72084F00500E43756 /* NSNotificationCenter+STNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0F32084F00500E43756 /* NSNotificationCenter+STNotifications.h */; };
-		E8C1D0FF2084F02600E43756 /* STNotificationTokenCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0F92084F02600E43756 /* STNotificationTokenCase.m */; };
-		E8C1D1002084F02600E43756 /* STNotificationObserverCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0FA2084F02600E43756 /* STNotificationObserverCase.m */; };
-		E8C1D1012084F02600E43756 /* STNotificationCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0FB2084F02600E43756 /* STNotificationCase.m */; };
-		E8C1D1022084F02600E43756 /* NSNotificationCenterCase+STNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0FD2084F02600E43756 /* NSNotificationCenterCase+STNotification.m */; };
-		E8C1D1032084F02600E43756 /* STNotificationFactoryCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0FE2084F02600E43756 /* STNotificationFactoryCase.m */; };
+		E8D9F84320865848008892F6 /* NSNotificationCenterCase+STNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F83C20865848008892F6 /* NSNotificationCenterCase+STNotification.m */; };
+		E8D9F84420865848008892F6 /* STNotificationTokenCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F83F20865848008892F6 /* STNotificationTokenCase.m */; };
+		E8D9F84520865848008892F6 /* STNotificationObserverCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F84020865848008892F6 /* STNotificationObserverCase.m */; };
+		E8D9F84620865848008892F6 /* STNotificationCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F84120865848008892F6 /* STNotificationCase.m */; };
+		E8D9F84720865848008892F6 /* STNotificationFactoryCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F84220865848008892F6 /* STNotificationFactoryCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,12 +70,12 @@
 		E8C1D0F12084F00500E43756 /* STNotificationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNotificationFactory.h; sourceTree = "<group>"; };
 		E8C1D0F22084F00500E43756 /* STNotificationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationFactory.m; sourceTree = "<group>"; };
 		E8C1D0F32084F00500E43756 /* NSNotificationCenter+STNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+STNotifications.h"; sourceTree = "<group>"; };
-		E8C1D0F92084F02600E43756 /* STNotificationTokenCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationTokenCase.m; sourceTree = "<group>"; };
-		E8C1D0FA2084F02600E43756 /* STNotificationObserverCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationObserverCase.m; sourceTree = "<group>"; };
-		E8C1D0FB2084F02600E43756 /* STNotificationCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationCase.m; sourceTree = "<group>"; };
-		E8C1D0FC2084F02600E43756 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../../TypedNotifications/STNotificationsTests/Constants.h; sourceTree = "<group>"; };
-		E8C1D0FD2084F02600E43756 /* NSNotificationCenterCase+STNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenterCase+STNotification.m"; path = "../../TypedNotifications/STNotificationsTests/NSNotificationCenterCase+STNotification.m"; sourceTree = "<group>"; };
-		E8C1D0FE2084F02600E43756 /* STNotificationFactoryCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STNotificationFactoryCase.m; path = ../../TypedNotifications/STNotificationsTests/STNotificationFactoryCase.m; sourceTree = "<group>"; };
+		E8D9F83C20865848008892F6 /* NSNotificationCenterCase+STNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenterCase+STNotification.m"; sourceTree = "<group>"; };
+		E8D9F83D20865848008892F6 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E8D9F83F20865848008892F6 /* STNotificationTokenCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationTokenCase.m; sourceTree = "<group>"; };
+		E8D9F84020865848008892F6 /* STNotificationObserverCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationObserverCase.m; sourceTree = "<group>"; };
+		E8D9F84120865848008892F6 /* STNotificationCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationCase.m; sourceTree = "<group>"; };
+		E8D9F84220865848008892F6 /* STNotificationFactoryCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNotificationFactoryCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,11 +133,11 @@
 		E8C1D0CF2084EF6F00E43756 /* STNotificationsTests */ = {
 			isa = PBXGroup;
 			children = (
+				E8D9F83D20865848008892F6 /* Constants.h */,
+				E8D9F83E20865848008892F6 /* Entities */,
+				E8D9F83C20865848008892F6 /* NSNotificationCenterCase+STNotification.m */,
+				E8D9F84220865848008892F6 /* STNotificationFactoryCase.m */,
 				E8C1D0D22084EF6F00E43756 /* Info.plist */,
-				E8C1D0FC2084F02600E43756 /* Constants.h */,
-				E8C1D0F82084F02600E43756 /* Entities */,
-				E8C1D0FD2084F02600E43756 /* NSNotificationCenterCase+STNotification.m */,
-				E8C1D0FE2084F02600E43756 /* STNotificationFactoryCase.m */,
 			);
 			path = STNotificationsTests;
 			sourceTree = "<group>";
@@ -166,22 +166,21 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		E8C1D0F82084F02600E43756 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				E8C1D0F92084F02600E43756 /* STNotificationTokenCase.m */,
-				E8C1D0FA2084F02600E43756 /* STNotificationObserverCase.m */,
-				E8C1D0FB2084F02600E43756 /* STNotificationCase.m */,
-			);
-			name = Entities;
-			path = ../../TypedNotifications/STNotificationsTests/Entities;
-			sourceTree = "<group>";
-		};
 		E8C1D1072084F08F00E43756 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8D9F83E20865848008892F6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E8D9F83F20865848008892F6 /* STNotificationTokenCase.m */,
+				E8D9F84020865848008892F6 /* STNotificationObserverCase.m */,
+				E8D9F84120865848008892F6 /* STNotificationCase.m */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,11 +333,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C1D0FF2084F02600E43756 /* STNotificationTokenCase.m in Sources */,
-				E8C1D1032084F02600E43756 /* STNotificationFactoryCase.m in Sources */,
-				E8C1D1012084F02600E43756 /* STNotificationCase.m in Sources */,
-				E8C1D1022084F02600E43756 /* NSNotificationCenterCase+STNotification.m in Sources */,
-				E8C1D1002084F02600E43756 /* STNotificationObserverCase.m in Sources */,
+				E8D9F84320865848008892F6 /* NSNotificationCenterCase+STNotification.m in Sources */,
+				E8D9F84720865848008892F6 /* STNotificationFactoryCase.m in Sources */,
+				E8D9F84620865848008892F6 /* STNotificationCase.m in Sources */,
+				E8D9F84420865848008892F6 /* STNotificationTokenCase.m in Sources */,
+				E8D9F84520865848008892F6 /* STNotificationObserverCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
