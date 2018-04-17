@@ -1,0 +1,9 @@
+language: objective-c
+osx_image: xcode9.3
+branches:
+  only:
+    - master
+script:
+  - xcodebuild -scheme STNotifications -workspace STNotifications.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
