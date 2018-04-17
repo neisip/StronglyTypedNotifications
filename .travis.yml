@@ -4,7 +4,6 @@ branches:
   only:
     - master
 before_install:
-  - brew install carthage
   - carthage update --platform iOS --no-use-binaries --cache-builds
 script:
   - xcodebuild -scheme STNotifications -workspace STNotifications.xcworkspace -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6"  -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test
