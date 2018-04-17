@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81BF6E42086786000AA7E15 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = E81BF6E32086786000AA7E15 /* Alert.m */; };
 		E8D9F856208663F2008892F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F855208663F2008892F6 /* AppDelegate.m */; };
 		E8D9F859208663F2008892F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F858208663F2008892F6 /* ViewController.m */; };
 		E8D9F85C208663F2008892F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D9F85A208663F2008892F6 /* Main.storyboard */; };
@@ -16,9 +17,12 @@
 		E8D9F87B208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F87A208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.m */; };
 		E8D9F887208671A5008892F6 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F886208671A5008892F6 /* Payload.m */; };
 		E8D9F88820867669008892F6 /* STNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D9F871208665C6008892F6 /* STNotifications.framework */; };
+		E8D9F88B20867818008892F6 /* AlertNotificationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F88A20867818008892F6 /* AlertNotificationFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81BF6E22086786000AA7E15 /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		E81BF6E32086786000AA7E15 /* Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
 		E8D9F851208663F2008892F6 /* STNotifications-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STNotifications-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D9F854208663F2008892F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8D9F855208663F2008892F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		E8D9F88120866ECC008892F6 /* STNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = STNotifications.framework; path = "DerivedData/Build/Products/Debug-iphonesimulator/STNotifications.framework"; sourceTree = "<group>"; };
 		E8D9F885208671A5008892F6 /* Payload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Payload.h; sourceTree = "<group>"; };
 		E8D9F886208671A5008892F6 /* Payload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Payload.m; sourceTree = "<group>"; };
+		E8D9F88920867817008892F6 /* AlertNotificationFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertNotificationFactory.h; sourceTree = "<group>"; };
+		E8D9F88A20867818008892F6 /* AlertNotificationFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertNotificationFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81BF6E520867A9300AA7E15 /* NotificationFactories */ = {
+			isa = PBXGroup;
+			children = (
+				E8D9F879208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.h */,
+				E8D9F87A208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.m */,
+				E8D9F88920867817008892F6 /* AlertNotificationFactory.h */,
+				E8D9F88A20867818008892F6 /* AlertNotificationFactory.m */,
+			);
+			path = NotificationFactories;
+			sourceTree = "<group>";
+		};
 		E8D9F848208663F2008892F6 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +86,15 @@
 		E8D9F853208663F2008892F6 /* STNotifications-Example */ = {
 			isa = PBXGroup;
 			children = (
+				E81BF6E520867A9300AA7E15 /* NotificationFactories */,
 				E8D9F854208663F2008892F6 /* AppDelegate.h */,
 				E8D9F855208663F2008892F6 /* AppDelegate.m */,
 				E8D9F857208663F2008892F6 /* ViewController.h */,
 				E8D9F858208663F2008892F6 /* ViewController.m */,
 				E8D9F885208671A5008892F6 /* Payload.h */,
 				E8D9F886208671A5008892F6 /* Payload.m */,
-				E8D9F879208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.h */,
-				E8D9F87A208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.m */,
+				E81BF6E22086786000AA7E15 /* Alert.h */,
+				E81BF6E32086786000AA7E15 /* Alert.m */,
 				E8D9F85A208663F2008892F6 /* Main.storyboard */,
 				E8D9F85D208663F3008892F6 /* Assets.xcassets */,
 				E8D9F85F208663F3008892F6 /* LaunchScreen.storyboard */,
@@ -170,7 +188,9 @@
 				E8D9F864208663F3008892F6 /* main.m in Sources */,
 				E8D9F856208663F2008892F6 /* AppDelegate.m in Sources */,
 				E8D9F887208671A5008892F6 /* Payload.m in Sources */,
+				E81BF6E42086786000AA7E15 /* Alert.m in Sources */,
 				E8D9F87B208667A0008892F6 /* STNotificationFactory+YourCustomNotifications.m in Sources */,
+				E8D9F88B20867818008892F6 /* AlertNotificationFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
