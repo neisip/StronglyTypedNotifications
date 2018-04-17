@@ -14,7 +14,9 @@
 @implementation NSNotificationCenter (STNotifications)
 
 - (STNotificationToken * _Nonnull)stn_addNotificationObserver:(STNotificationObserver * _Nonnull)observer {
-    id<NSObject> token = [self addObserverForName:observer.name object:observer.sender queue:observer.queue usingBlock:observer.onRecievedBlock];
+    id<NSObject> token = [self addObserverForName:observer.name object:observer.sender queue:observer.queue usingBlock:^(NSNotification * _Nonnull note) {
+        observer.onRecievedBlock(note.object);
+    }];
     return [[STNotificationToken alloc] initWithToken:token center:self];
 }
 

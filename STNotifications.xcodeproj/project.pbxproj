@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		E8C1D0CC2084EF6F00E43756 /* STNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C1D0C22084EF6F00E43756 /* STNotifications.framework */; };
 		E8C1D0D32084EF6F00E43756 /* STNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0C52084EF6F00E43756 /* STNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8C1D0E72084EFF000E43756 /* STNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0DE2084EFF000E43756 /* STNotificationObserver.h */; };
+		E8C1D0E72084EFF000E43756 /* STNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0DE2084EFF000E43756 /* STNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C1D0E82084EFF000E43756 /* STNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0DF2084EFF000E43756 /* STNotification.m */; };
-		E8C1D0E92084EFF000E43756 /* STNotificationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E02084EFF000E43756 /* STNotificationToken.h */; };
-		E8C1D0EA2084EFF000E43756 /* STNotification+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E12084EFF000E43756 /* STNotification+Protected.h */; };
-		E8C1D0EB2084EFF000E43756 /* STNotificationObserver+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E22084EFF000E43756 /* STNotificationObserver+Protected.h */; };
+		E8C1D0E92084EFF000E43756 /* STNotificationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E02084EFF000E43756 /* STNotificationToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8C1D0EA2084EFF000E43756 /* STNotification+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E12084EFF000E43756 /* STNotification+Protected.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8C1D0EB2084EFF000E43756 /* STNotificationObserver+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E22084EFF000E43756 /* STNotificationObserver+Protected.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C1D0EC2084EFF000E43756 /* STNotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0E32084EFF000E43756 /* STNotificationObserver.m */; };
-		E8C1D0ED2084EFF000E43756 /* STNotificationNameProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E42084EFF000E43756 /* STNotificationNameProvider.h */; };
+		E8C1D0ED2084EFF000E43756 /* STNotificationNameProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E42084EFF000E43756 /* STNotificationNameProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C1D0EE2084EFF000E43756 /* STNotificationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0E52084EFF000E43756 /* STNotificationToken.m */; };
-		E8C1D0EF2084EFF000E43756 /* STNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E62084EFF000E43756 /* STNotification.h */; };
+		E8C1D0EF2084EFF000E43756 /* STNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0E62084EFF000E43756 /* STNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C1D0F42084F00500E43756 /* NSNotificationCenter+STNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0F02084F00500E43756 /* NSNotificationCenter+STNotifications.m */; };
-		E8C1D0F52084F00500E43756 /* STNotificationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0F12084F00500E43756 /* STNotificationFactory.h */; };
+		E8C1D0F52084F00500E43756 /* STNotificationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0F12084F00500E43756 /* STNotificationFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C1D0F62084F00500E43756 /* STNotificationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C1D0F22084F00500E43756 /* STNotificationFactory.m */; };
-		E8C1D0F72084F00500E43756 /* NSNotificationCenter+STNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0F32084F00500E43756 /* NSNotificationCenter+STNotifications.h */; };
+		E8C1D0F72084F00500E43756 /* NSNotificationCenter+STNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0F32084F00500E43756 /* NSNotificationCenter+STNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8D9F84320865848008892F6 /* NSNotificationCenterCase+STNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F83C20865848008892F6 /* NSNotificationCenterCase+STNotification.m */; };
 		E8D9F84420865848008892F6 /* STNotificationTokenCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F83F20865848008892F6 /* STNotificationTokenCase.m */; };
 		E8D9F84520865848008892F6 /* STNotificationObserverCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D9F84020865848008892F6 /* STNotificationObserverCase.m */; };

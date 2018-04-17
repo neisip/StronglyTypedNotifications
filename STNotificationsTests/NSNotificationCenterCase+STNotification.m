@@ -45,7 +45,7 @@
     //given
     __block BOOL isCalled = NO;
     STNotificationObserver<NSString *> *observer = [self.notificationFactory makeObserverWithOnRecievedBlock:^(NSString * _Nullable payload) {
-        isCalled = YES;
+        isCalled = payload.length > 0;
     }];
     STNotification<NSString *> *notification = [self.notificationFactory makeNotificationWithPayload:@"stubPayload"];
     

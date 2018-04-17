@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:STNotifications-Example.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:STNotifications.xcodeproj">
    </FileRef>
 </Workspace>
