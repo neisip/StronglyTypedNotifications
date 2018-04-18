@@ -8,7 +8,7 @@
     <a href="https://github.com/Carthage/Carthage"><img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/></a>
 </p>
 
-STNotifications is a library for Strongly Typed Notifications for Objective-C
+STNotifications is Objective-C library for Strongly Typed Notifications
 
 - [Features](#features)
 - [Usage](#usage)
@@ -24,8 +24,7 @@ STNotifications is a library for Strongly Typed Notifications for Objective-C
 
 ## Usage
 
-# Creating factory
-Write STNotificationsFactory - factory method 
+# Create factory method
 ```
 #import <STNotifications/STNotifications.h>
 @class Payload;
@@ -42,7 +41,7 @@ Write STNotificationsFactory - factory method
 
 ```
 
-or your own subclass:
+# or your own subclass:
 
 ```
 #import <STNotifications/STNotifications.h>
@@ -62,14 +61,12 @@ or your own subclass:
 @end
 ```
 
-*That's it! Now you NotificationName and payloadType can be no longer be messed up!*
+*That's it! Now your NotificationName and payloadType can be no longer be messed up!*
 
 # Start observing
 
-```
-[[STNotificationFactory payloadFactory] makeObserverWithOnRecievedBlock:<#^(Payload * _Nullable)recievedBlock#> 
-```
-*Look - type is already there! Same as in NSArray! : )*
+*Autocompletion will insert payload type you specified in factory same way as it's in NSArray!*
+  ![STNotifications: Strongly Typed Notifications for Objective C](https://raw.githubusercontent.com/neisip/StronglyTypedNotifications/master/TypedAutoCompletion.png)
 
 ```
 @property (strong, nonatomic) STNotificationToken *alertToken; // < ---- Auto Unsubscription on deallocation!
@@ -82,7 +79,10 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
 ```
 *STNotificationToken has autounsubscription feature on deallocation!*
 
-# Posting
+# Post notification
+
+*You can no longer mess up payload type!*
+  ![STNotifications: Strongly Typed Notifications for Objective C](https://raw.githubusercontent.com/neisip/StronglyTypedNotifications/master/IncompatiblePointerType.png)
 
 ```
 //STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:<#(Alert * _Nullable)#>
