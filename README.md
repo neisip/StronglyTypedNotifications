@@ -99,7 +99,7 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
 
 ```ruby
 target '<Your Target Name>' do
-    pod 'STNotifications', '~> 1.1.1'
+    pod 'STNotifications', '~> 1.1.2'
 end
 ```
 
