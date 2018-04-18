@@ -28,25 +28,30 @@
     [super tearDown];
 }
 
+
+
 - (void)testThatItCreatesObserverWithSetReceivedBlockAndName {
     //given
-    void (^onRecievedBlock)(NSString *) = ^ void(NSString *payload) {};
-    
     //when
-    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithOnRecievedBlock:onRecievedBlock];
+    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithOnRecievedBlock:[self makeOnRecievedBlock]];
     
     //then
     XCTAssert(observer.onRecievedBlock != nil && observer.name.length > 0);
 }
 
+- (void(^)(STNotification<NSString *> *))makeOnRecievedBlock {
+    return  ^void(STNotification<NSString *> *payload){
+        
+    };
+}
+
 - (void)testThatItCreatesObserverWithSetReceivedBlockNameQueueSender {
     //given
-    void (^onRecievedBlock)(NSString *) = ^ void(NSString *payload) {};
     id sender = [NSObject new];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     //when
-    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithQueue:queue sender:sender onRecievedBlock:onRecievedBlock];
+    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithQueue:queue sender:sender onRecievedBlock:[self makeOnRecievedBlock]];
     
     //then
     XCTAssert(observer.onRecievedBlock != nil && observer.name.length > 0 && observer.sender && [observer.queue isEqual:queue]);
@@ -55,12 +60,13 @@
 - (void)testThatItCreatesNotificationWithPayloadAndName {
     //given
     NSString *payload = @"payload";
-    
+    id sender = payload;
     //when
-    STNotification<NSString *> *notification = [self.sut makeNotificationWithPayload:payload];
+    STNotification<NSString *> *notification = [self.sut makeNotificationWithPayload:payload sender:sender];
     
     //then
-    XCTAssert(notification.payload != nil && notification.name.length > 0);
+    XCTAssert(notification.payload != nil && notification.name.length > 0 && notification.sender);
 }
+
 
 @end

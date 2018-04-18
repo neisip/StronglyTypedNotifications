@@ -153,15 +153,15 @@
 		E8C1D0DD2084EFF000E43756 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				E8C1D0DE2084EFF000E43756 /* STNotificationObserver.h */,
-				E8C1D0DF2084EFF000E43756 /* STNotification.m */,
-				E8C1D0E02084EFF000E43756 /* STNotificationToken.h */,
-				E8C1D0E12084EFF000E43756 /* STNotification+Protected.h */,
-				E8C1D0E22084EFF000E43756 /* STNotificationObserver+Protected.h */,
-				E8C1D0E32084EFF000E43756 /* STNotificationObserver.m */,
-				E8C1D0E42084EFF000E43756 /* STNotificationNameProvider.h */,
-				E8C1D0E52084EFF000E43756 /* STNotificationToken.m */,
 				E8C1D0E62084EFF000E43756 /* STNotification.h */,
+				E8C1D0DF2084EFF000E43756 /* STNotification.m */,
+				E8C1D0E12084EFF000E43756 /* STNotification+Protected.h */,
+				E8C1D0DE2084EFF000E43756 /* STNotificationObserver.h */,
+				E8C1D0E32084EFF000E43756 /* STNotificationObserver.m */,
+				E8C1D0E22084EFF000E43756 /* STNotificationObserver+Protected.h */,
+				E8C1D0E02084EFF000E43756 /* STNotificationToken.h */,
+				E8C1D0E52084EFF000E43756 /* STNotificationToken.m */,
+				E8C1D0E42084EFF000E43756 /* STNotificationNameProvider.h */,
 			);
 			path = Entities;
 			sourceTree = "<group>";

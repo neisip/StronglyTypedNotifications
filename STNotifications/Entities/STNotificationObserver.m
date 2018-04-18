@@ -12,7 +12,7 @@
 @property (nonatomic, copy, readwrite) NSNotificationName __nonnull name;
 @property (nonatomic, strong, readwrite) NSOperationQueue * __nonnull queue;
 @property (nonatomic, weak, readwrite) id _Nullable sender;
-@property (nonatomic, copy, readwrite) void (^ _Nullable onRecievedBlock)(id _Nullable );
+@property (nonatomic, copy, readwrite) void (^ _Nullable onRecievedBlock)(STNotification<id> * _Nullable);
 @end
 
 @implementation STNotificationObserver

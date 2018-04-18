@@ -11,4 +11,5 @@
 @interface STNotification (Protected)
 - (void)setPayload:(id)payload;
 - (void)setName:(NSNotificationName)name;
+- (void)setSender:(id)sender;
 @end

@@ -21,7 +21,7 @@
 }
 
 - (void)stn_postNotification:(STNotification * _Nonnull)notification {
-     [self postNotificationName:notification.name object:notification.payload];
+     [self postNotificationName:notification.name object:notification];
 }
 
 @end

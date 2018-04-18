@@ -12,6 +12,7 @@
 #import "STNotificationObserver.h"
 #import "STNotificationFactory.h"
 #import "Constants.h"
+#import "STNotification.h"
 
 @interface NSNotificationCenterCase_STNotification : XCTestCase
 @property (strong, nonatomic) NSNotificationCenter *sut;
@@ -33,7 +34,7 @@
 
 - (void)testThatItReturnsNotificationTokenOnAddingObserver {
     //given
-    STNotificationObserver<NSString *> *observer = [self.notificationFactory makeObserverWithOnRecievedBlock:^(NSString * _Nullable payload) { }];
+    STNotificationObserver<NSString *> *observer = [self.notificationFactory makeObserverWithOnRecievedBlock:^void(STNotification<NSString *> *notification){ }];
     //when
     STNotificationToken *token = [self.sut stn_addNotificationObserver:observer];
     //then
@@ -43,9 +44,9 @@
 - (void)testThatItCallsBlockOnRecievedNotificationWithPayload {
     
     //given
-    __block BOOL isCalled = NO;
-    STNotificationObserver<NSString *> *observer = [self.notificationFactory makeObserverWithOnRecievedBlock:^(NSString * _Nullable payload) {
-        isCalled = payload.length > 0;
+    __block BOOL hasRecievedMessage = NO;
+    STNotificationObserver<NSString *> *observer = [self.notificationFactory makeObserverWithOnRecievedBlock:^void(STNotification<NSString *> *notification) {
+        hasRecievedMessage = notification.payload.length > 0;
     }];
     STNotification<NSString *> *notification = [self.notificationFactory makeNotificationWithPayload:@"stubPayload"];
     
@@ -54,8 +55,25 @@
     [self.sut stn_postNotification:notification];
     
     //then
-    XCTAssert(isCalled);
+    XCTAssert(hasRecievedMessage);
+  
     
+}
+
+- (void)testThatItHasSenderInNotification {
+    //given
+    __block STNotification<NSString *> *sutNotification;
+    STNotificationObserver<NSString *> *observer = [self.notificationFactory makeObserverWithOnRecievedBlock:^void(STNotification<NSString *> *notification) {
+        sutNotification = notification;
+    }];
+    
+    STNotification<NSString *> *notification = [self.notificationFactory makeNotificationWithPayload:@"stubPayload" sender:observer];
+    
+    //when
+    STNotificationToken * __unused token = [self.sut stn_addNotificationObserver:observer];
+    [self.sut stn_postNotification:notification];
+    //then
+    XCTAssert(sutNotification.sender);
 }
 
 @end

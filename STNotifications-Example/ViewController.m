@@ -21,9 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    STNotificationObserver * observer = [[STNotificationFactory payloadFactory] makeObserverWithOnRecievedBlock:^(Payload * _Nullable payload) {
-        NSLog(@"%@", payload.message);
+    STNotificationObserver * observer = [[STNotificationFactory payloadFactory] makeObserverWithOnRecievedBlock:^(STNotification<Payload * > *notification) {
+        NSLog(@"%@", notification.payload.message);
     }];
     self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:observer];
 }
@@ -31,8 +30,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    STNotificationObserver * alertObserver = [[AlertNotificationFactory factory] makeObserverWithOnRecievedBlock:^(Alert * _Nullable alert) {
-        NSLog(@"%@", alert.message);
+    STNotificationObserver *alertObserver = [[AlertNotificationFactory factory] makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
+        NSLog(@"%@", notification.payload.message);
+        NSLog(@"%@", notification.sender);
     }];
     self.alertToken = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:alertObserver];
 }
@@ -48,7 +48,7 @@
     
     Alert *alert = [Alert new];
     alert.message = @"ALARM!!!";
-    STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert];
+    STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert sender:self];
     [[NSNotificationCenter defaultCenter] stn_postNotification:alertNotification];
 }
 

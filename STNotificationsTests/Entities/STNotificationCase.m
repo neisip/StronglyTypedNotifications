@@ -30,15 +30,17 @@
     XCTAssert(self.sut.name.length > 0);
 }
 
-- (void)testThatItSetsNameAndPayloadOnCreation {
+- (void)testThatItSetsNameAndPayloadAndSenderOnCreation {
     //given
     NSString * stubPayload = @"stub";
     
     //when
-    self.sut = [[STNotification<NSString *> alloc] initWithName:stn_stubNotificationName payload:stubPayload];
+    self.sut = [[STNotification<NSString *> alloc] initWithName:stn_stubNotificationName payload:stubPayload sender:stubPayload];
     
     //then
-    XCTAssert(self.sut.name.length > 0 && self.sut.payload.length >0);
+    XCTAssert(self.sut.name.length > 0
+              && self.sut.payload.length >0
+              && self.sut.sender);
 }
 
 

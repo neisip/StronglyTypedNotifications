@@ -11,6 +11,6 @@
 @interface STNotificationObserver (Protected)
 - (void)setQueue:(NSOperationQueue * __nonnull)queue;
 - (void)setSender:(id __nonnull)sender;
-- (void)setOnRecievedBlock:(void (^ _Nullable)(id _Nullable))onRecievedBlock;
+- (void)setOnRecievedBlock:(void (^ _Nullable)(STNotification<id>  * _Nullable))onRecievedBlock;
 @end
 
