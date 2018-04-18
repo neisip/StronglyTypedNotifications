@@ -18,6 +18,7 @@ STNotifications is Objective-C library for Strongly Typed Notifications
 
 - [x] Strongly typed payload (using safe api around Objective-C lightweight generics)
 - [x] Makes sure only one NSNotificationName exists for Notification and Observer
+- [x] You have pointer to sender from recieved notification!
 - [x] Interoperable with Swift!
 - [x] Autounsubscribtion on NotificationToken deallocation!
 
@@ -69,14 +70,15 @@ STNotifications is Objective-C library for Strongly Typed Notifications
   ![STNotifications: Strongly Typed Notifications for Objective C](https://raw.githubusercontent.com/neisip/StronglyTypedNotifications/master/TypedAutoCompletion.png)
 
 ```
-@property (strong, nonatomic) STNotificationToken *alertToken; // < ---- Auto Unsubscription on deallocation!
+@property (strong, nonatomic) STNotificationToken *token; // < ---- Auto Unsubscription on deallocation!
 
-STNotificationObserver * observer = [[AlertNotificationFactory factory] makeObserverWithOnRecievedBlock:^(Alert * _Nullable alert) {
-        NSLog(@"%@", alert.message);
+ STNotificationObserver *observer = [[AlertNotificationFactory factory] makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
+        NSLog(@"%@", notification.payload.message);
+        NSLog(@"%@", notification.sender);
     }];
-
 self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:observer];
 ```
+*You can track down sender of notification!*
 *STNotificationToken has autounsubscription feature on deallocation!*
 
 # Post notification
@@ -90,9 +92,8 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
 
   Alert *alert = [Alert new];
   alert.message = @"ALARM!!!";
-  STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert];
-
-  [[NSNotificationCenter defaultCenter] stn_postNotification:alertNotification];
+  STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert sender:self];
+  [[NSNotificationCenter defaultCenter] stn_postNotification:alertNotification];
 ```
 
 ## Installation
