@@ -29,29 +29,24 @@
 }
 
 
-
 - (void)testThatItCreatesObserverWithSetReceivedBlockAndName {
     //given
+    void (^onRecieved)(STNotification<NSString *> *) = ^void(STNotification<NSString *> *payload){};
     //when
-    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithOnRecievedBlock:[self makeOnRecievedBlock]];
+    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithOnRecievedBlock:onRecieved];
     
     //then
     XCTAssert(observer.onRecievedBlock != nil && observer.name.length > 0);
-}
-
-- (void(^)(STNotification<NSString *> *))makeOnRecievedBlock {
-    return  ^void(STNotification<NSString *> *payload){
-        
-    };
 }
 
 - (void)testThatItCreatesObserverWithSetReceivedBlockNameQueueSender {
     //given
     id sender = [NSObject new];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    void (^onRecieved)(STNotification<NSString *> *) = ^void(STNotification<NSString *> *payload){};
     
     //when
-    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithQueue:queue sender:sender onRecievedBlock:[self makeOnRecievedBlock]];
+    STNotificationObserver<NSString *> *observer = [self.sut makeObserverWithQueue:queue sender:sender onRecievedBlock:onRecieved];
     
     //then
     XCTAssert(observer.onRecievedBlock != nil && observer.name.length > 0 && observer.sender && [observer.queue isEqual:queue]);
