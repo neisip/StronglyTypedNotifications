@@ -28,7 +28,7 @@ STNotifications is Objective-C library for Strongly Typed Notifications
 # Create factory method
 ```
 #import <STNotifications/STNotifications.h>
-@class Payload;
+@class Alert;
 
 @interface STNotificationFactory (YourCustomNotifications)
 + (STNotificationFactory<Payload *> *)payloadFactory;
@@ -46,23 +46,23 @@ STNotifications is Objective-C library for Strongly Typed Notifications
 
 ```
 #import <STNotifications/STNotifications.h>
-#import "Alert.h"
+#import "Payload.h"
 
-@interface AlertNotificationFactory : STNotificationFactory <Alert *>
+@interface PayloadNotificationFactory : STNotificationFactory <Payload *>
 + (instancetype)factory;
 @end
 
-#import "AlertNotificationFactory.h"
+#import "PayloadNotificationFactory.h"
 
-@implementation AlertNotificationFactory
+@implementation PayloadNotificationFactory
 
 + (instancetype)factory {
-    return [AlertNotificationFactory factoryWithNotificationName:@"AlertNotification"];
+    return [PayloadNotificationFactory factoryWithNotificationName:@"PayloadNotification"];
 }
 @end
 ```
 
-*That's it! Now your NotificationName and payloadType can be no longer be messed up!*
+*That's it! Now your NotificationName and Payload Type can be no longer be messed up!*
 
 # Start observing
 
@@ -87,9 +87,6 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
   ![STNotifications: Strongly Typed Notifications for Objective C](https://raw.githubusercontent.com/neisip/StronglyTypedNotifications/master/IncompatiblePointerType.png)
 
 ```
-//STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:<#(Alert * _Nullable)#>
-//Same here! no more messing with payload!
-
   Alert *alert = [Alert new];
   alert.message = @"ALARM!!!";
   STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert sender:self];
