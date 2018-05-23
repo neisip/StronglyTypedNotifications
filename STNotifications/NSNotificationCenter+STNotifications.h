@@ -11,6 +11,6 @@
 @class STNotificationToken, STNotification, STNotificationObserver;
 
 @interface NSNotificationCenter (STNotifications)
-- (STNotificationToken * _Nonnull)stn_addNotificationObserver:(STNotificationObserver * _Nonnull)observer;
-- (void)stn_postNotification:(STNotification * _Nonnull)notification;
+- (STNotificationToken * __nonnull)stn_addNotificationObserver:(STNotificationObserver * __nonnull)observer;
+- (void)stn_postNotification:(STNotification * __nonnull)notification;
 @end

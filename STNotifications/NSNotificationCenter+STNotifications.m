@@ -13,15 +13,17 @@
 
 @implementation NSNotificationCenter (STNotifications)
 
-- (STNotificationToken * _Nonnull)stn_addNotificationObserver:(STNotificationObserver * _Nonnull)observer {
-    id<NSObject> token = [self addObserverForName:observer.name object:observer.sender queue:observer.queue usingBlock:^(NSNotification * _Nonnull note) {
+- (STNotificationToken * __nonnull)stn_addNotificationObserver:(STNotificationObserver * __nonnull)observer {
+    NSParameterAssert(observer);
+    id<NSObject> token = [self addObserverForName:observer.name object:observer.sender queue:observer.queue usingBlock:^(NSNotification * __nonnull note) {
         observer.onRecievedBlock(note.object);
     }];
     return [[STNotificationToken alloc] initWithToken:token center:self];
 }
 
-- (void)stn_postNotification:(STNotification * _Nonnull)notification {
-     [self postNotificationName:notification.name object:notification];
+- (void)stn_postNotification:(STNotification * __nonnull)notification {
+    NSParameterAssert(notification);
+    [self postNotificationName:notification.name object:notification];
 }
 
 @end

@@ -12,9 +12,9 @@
 
 @interface STNotificationObserver<PayloadType> : NSObject <STNotificationNameProvider>
 @property (nonatomic, strong, readonly) NSOperationQueue * __nonnull queue;
-@property (nonatomic, weak, readonly) id _Nullable sender;
-@property (nonatomic, copy, readonly) void (^ _Nullable onRecievedBlock)(STNotification<PayloadType> * _Nullable);
+@property (nonatomic, weak, readonly) id __nullable sender;
+@property (nonatomic, copy, readonly) void (^ __nullable onRecievedBlock)(STNotification<PayloadType> * __nullable);
 
-- (instancetype _Nullable )init NS_UNAVAILABLE;
-+ (instancetype _Nullable )new NS_UNAVAILABLE;
+- (instancetype __nullable)init NS_UNAVAILABLE;
++ (instancetype __nullable)new NS_UNAVAILABLE;
 @end

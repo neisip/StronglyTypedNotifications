@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface STNotificationToken : NSObject
-@property (nonatomic, strong, readonly) id<NSObject> _Nonnull token;
-- (instancetype _Nonnull )initWithToken:(id<NSObject> _Nonnull)token center:(NSNotificationCenter *_Nonnull)center;
-- (instancetype _Nonnull )init NS_UNAVAILABLE;
-+ (instancetype _Nonnull )new NS_UNAVAILABLE;
+@property (nonatomic, strong, readonly) id<NSObject> __nonnull token;
+- (instancetype __nonnull)initWithToken:(id<NSObject> __nonnull)token center:(NSNotificationCenter *__nonnull)center;
+- (instancetype __nonnull)init NS_UNAVAILABLE;
++ (instancetype __nonnull)new NS_UNAVAILABLE;
 @end

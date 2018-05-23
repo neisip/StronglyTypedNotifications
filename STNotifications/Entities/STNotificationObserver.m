@@ -11,13 +11,14 @@
 @interface STNotificationObserver ()
 @property (nonatomic, copy, readwrite) NSNotificationName __nonnull name;
 @property (nonatomic, strong, readwrite) NSOperationQueue * __nonnull queue;
-@property (nonatomic, weak, readwrite) id _Nullable sender;
-@property (nonatomic, copy, readwrite) void (^ _Nullable onRecievedBlock)(STNotification<id> * _Nullable);
+@property (nonatomic, weak, readwrite) id __nullable sender;
+@property (nonatomic, copy, readwrite) void (^ __nullable onRecievedBlock)(STNotification<id> * __nullable);
 @end
 
 @implementation STNotificationObserver
 
-- (instancetype _Nullable)initWithName:(NSNotificationName _Nonnull )name {
+- (instancetype __nullable)initWithName:(NSNotificationName __nonnull )name {
+    NSParameterAssert(name.length > 0);
     if (self = [super init]) {
         _queue = [NSOperationQueue mainQueue];
         _name = name;

@@ -9,13 +9,13 @@
 #import "STNotificationToken.h"
 
 @interface STNotificationToken ()
-@property (nonatomic, strong, readwrite) id<NSObject> _Nonnull token;
-@property (nonatomic, strong, readwrite) NSNotificationCenter *_Nonnull center;
+@property (nonatomic, strong, readwrite) id<NSObject> __nonnull token;
+@property (nonatomic, weak, readwrite) NSNotificationCenter *__nullable center;
 @end
 
 @implementation STNotificationToken
 
-- (instancetype _Nonnull )initWithToken:(id<NSObject> _Nonnull)token center:(NSNotificationCenter *_Nonnull)center {
+- (instancetype __nonnull)initWithToken:(id<NSObject> __nonnull)token center:(NSNotificationCenter *__nonnull)center {
     NSParameterAssert(token && center);
     if (self = [super init]) {
         _token = token;

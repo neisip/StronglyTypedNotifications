@@ -12,13 +12,13 @@
 
 
 @interface STNotificationFactory<PayloadType>: NSObject
-+ (instancetype _Nullable)factoryWithNotificationName:(NSNotificationName _Nonnull )name;
++ (instancetype _Nullable)factoryWithNotificationName:(NSNotificationName __nonnull )name;
 
-- (STNotificationObserver<PayloadType> *_Nullable)makeObserverWithOnRecievedBlock:(void (^_Nonnull)(STNotification<PayloadType>  * _Nullable))recievedBlock;
-- (STNotificationObserver<PayloadType> *_Nonnull)makeObserverWithQueue:(NSOperationQueue *_Nullable)queue
-                                                                   sender:(id _Nullable )sender
-                                                          onRecievedBlock:(void (^_Nonnull)(STNotification<PayloadType>  * _Nullable))recievedBlock;
+- (STNotificationObserver<PayloadType> *__nullable)makeObserverWithOnRecievedBlock:(void (^__nonnull)(STNotification<PayloadType>  * _Nullable))recievedBlock;
+- (STNotificationObserver<PayloadType> *__nonnull)makeObserverWithQueue:(NSOperationQueue *__nullable)queue
+                                                                   sender:(id __nullable)sender
+                                                          onRecievedBlock:(void (^__nonnull)(STNotification<PayloadType>  * __nullable))recievedBlock;
 
-- (STNotification<PayloadType> *_Nonnull)makeNotificationWithPayload:(PayloadType _Nullable )payload;
-- (STNotification<PayloadType> *_Nonnull)makeNotificationWithPayload:(PayloadType _Nullable)payload sender:(id _Nullable)sender;
+- (STNotification<PayloadType> *__nonnull)makeNotificationWithPayload:(PayloadType __nullable)payload;
+- (STNotification<PayloadType> *__nonnull)makeNotificationWithPayload:(PayloadType __nullable)payload sender:(id __nullable)sender;
 @end
