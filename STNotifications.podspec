@@ -13,6 +13,7 @@ Benefits:
 4) Interoperable with swift!
 5) 100% Code Coverage!
 
+                        DESC
 
   s.homepage     = "https://github.com/neisip/StronglyTypedNotifications"
   s.license      = { :type => "MIT", :file => "LICENSE" }

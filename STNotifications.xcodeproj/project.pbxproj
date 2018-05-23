@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82DED9620B5CCA40013C115 /* STNotifications.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E82DED9520B5CCA40013C115 /* STNotifications.podspec */; };
+		E82DED9820B5CCAA0013C115 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E82DED9720B5CCAA0013C115 /* README.md */; };
 		E8C1D0CC2084EF6F00E43756 /* STNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C1D0C22084EF6F00E43756 /* STNotifications.framework */; };
 		E8C1D0D32084EF6F00E43756 /* STNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0C52084EF6F00E43756 /* STNotifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C1D0E72084EFF000E43756 /* STNotificationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C1D0DE2084EFF000E43756 /* STNotificationObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E82DED9520B5CCA40013C115 /* STNotifications.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = STNotifications.podspec; sourceTree = SOURCE_ROOT; };
+		E82DED9720B5CCAA0013C115 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E8C1D0C22084EF6F00E43756 /* STNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C1D0C52084EF6F00E43756 /* STNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STNotifications.h; sourceTree = "<group>"; };
 		E8C1D0C62084EF6F00E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		E8C1D0DC2084EFB500E43756 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E82DED9720B5CCAA0013C115 /* README.md */,
+				E82DED9520B5CCA40013C115 /* STNotifications.podspec */,
 				E8C1D0C62084EF6F00E43756 /* Info.plist */,
 			);
 			path = Resources;
@@ -285,6 +291,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82DED9820B5CCAA0013C115 /* README.md in Resources */,
+				E82DED9620B5CCA40013C115 /* STNotifications.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
