@@ -46,20 +46,23 @@ STNotifications is Objective-C library for Strongly Typed Notifications
 
 ```
 #import <STNotifications/STNotifications.h>
-#import "Payload.h"
+#import "Alert.h"
 
-@interface PayloadNotificationFactory : STNotificationFactory <Payload *>
+@interface AlertNotificationFactory : STNotificationFactory <Alert *>
+- (instancetype)init;
 + (instancetype)factory;
 @end
 
-#import "PayloadNotificationFactory.h"
+@implementation AlertNotificationFactory
 
-@implementation PayloadNotificationFactory
-
+- (instancetype)init {
+    return self = [super initWithNotificationName:@"AlertNotification"];
+}
 + (instancetype)factory {
-    return [PayloadNotificationFactory factoryWithNotificationName:@"PayloadNotification"];
+    return [[AlertNotificationFactory alloc] init];
 }
 @end
+
 ```
 
 *That's it! Now your NotificationName and Payload Type can be no longer be messed up!*
@@ -70,13 +73,14 @@ STNotifications is Objective-C library for Strongly Typed Notifications
   ![STNotifications: Strongly Typed Notifications for Objective C](https://raw.githubusercontent.com/neisip/StronglyTypedNotifications/master/TypedAutoCompletion.png)
 
 ```
-@property (strong, nonatomic) STNotificationToken *token; // < ---- Auto Unsubscription on deallocation!
-
- STNotificationObserver *observer = [[AlertNotificationFactory factory] makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
-        NSLog(@"%@", notification.payload.message);
-        NSLog(@"%@", notification.sender);
-    }];
-self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:observer];
+  @property (strong, nonatomic) STNotificationToken *token; // < ---- Auto Unsubscription on deallocation!
+  ...
+  let factory = [AlertNotificationFactory new];
+  let alertObserver = [factory makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
+  NSLog(@"%@", notification.payload.message);
+  NSLog(@"%@", notification.sender);
+  }];
+  self.alertToken = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:alertObserver];
 ```
 *You can track down sender of notification!*
 *STNotificationToken has autounsubscription feature on deallocation!*
@@ -87,9 +91,11 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
   ![STNotifications: Strongly Typed Notifications for Objective C](https://raw.githubusercontent.com/neisip/StronglyTypedNotifications/master/IncompatiblePointerType.png)
 
 ```
-  Alert *alert = [Alert new];
+  var alert = [Alert new];
   alert.message = @"ALARM!!!";
-  STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert sender:self];
+
+  let alertFactory = [AlertNotificationFactory new];
+  let alertNotification = [alertFactory makeNotificationWithPayload:alert sender:self];
   [[NSNotificationCenter defaultCenter] stn_postNotification:alertNotification];
 ```
 
@@ -99,7 +105,7 @@ self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:o
 
 ```ruby
 target '<Your Target Name>' do
-    pod 'STNotifications', '~> 1.1.3'
+    pod 'STNotifications', '~> 1.1.4'
 end
 ```
 

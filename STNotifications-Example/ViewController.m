@@ -11,6 +11,9 @@
 #import "Payload.h"
 #import "AlertNotificationFactory.h"
 
+#define let __auto_type const
+#define var __auto_type
+
 @interface ViewController ()
 @property (strong, nonatomic) STNotificationToken *token; // < ---- Auto Unsubscription on deallocation!
 @property (strong, nonatomic) STNotificationToken *alertToken; // < ---- Auto Unsubscription on deallocation!
@@ -20,8 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    STNotificationObserver * observer = [[STNotificationFactory payloadFactory] makeObserverWithOnRecievedBlock:^(STNotification<Payload * > *notification) {
+    let factory = [STNotificationFactory payloadFactory];
+    let observer = [factory makeObserverWithOnRecievedBlock:^(STNotification<Payload * > *notification) {
         NSLog(@"%@", notification.payload.message);
     }];
     self.token = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:observer];
@@ -30,7 +33,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    STNotificationObserver *alertObserver = [[AlertNotificationFactory factory] makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
+    let factory = [AlertNotificationFactory new];
+    let alertObserver = [factory makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
         NSLog(@"%@", notification.payload.message);
         NSLog(@"%@", notification.sender);
     }];
@@ -40,15 +44,18 @@
 
 - (IBAction)notify:(UIButton *)sender {
     
-    Payload *payload = [Payload new];
+    var payload = [Payload new];
     payload.message = @"Hi there!";
-    STNotification *notification = [[STNotificationFactory payloadFactory] makeNotificationWithPayload:payload];
+    
+    let payloadFactory = [STNotificationFactory payloadFactory];
+    let notification = [payloadFactory makeNotificationWithPayload:payload];
     [[NSNotificationCenter defaultCenter] stn_postNotification:notification];
     
-    
-    Alert *alert = [Alert new];
+    var alert = [Alert new];
     alert.message = @"ALARM!!!";
-    STNotification *alertNotification = [[AlertNotificationFactory factory] makeNotificationWithPayload:alert sender:self];
+    
+    let alertFactory = [AlertNotificationFactory new];
+    let alertNotification = [alertFactory makeNotificationWithPayload:alert sender:self];
     [[NSNotificationCenter defaultCenter] stn_postNotification:alertNotification];
 }
 

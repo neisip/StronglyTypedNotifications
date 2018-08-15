@@ -329,9 +329,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
-					"$(PROJECT_DIR)/DerivedData/Build/Products/Debug-iphonesimulator",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_PEDANTIC = NO;
 				INFOPLIST_FILE = "STNotifications-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexsoft.STNotifications-Example";
@@ -350,9 +352,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
-					"$(PROJECT_DIR)/DerivedData/Build/Products/Debug-iphonesimulator",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_PEDANTIC = NO;
 				INFOPLIST_FILE = "STNotifications-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alexsoft.STNotifications-Example";

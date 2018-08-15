@@ -10,7 +10,10 @@
 
 @implementation AlertNotificationFactory
 
+- (instancetype)init {
+    return self = [super initWithNotificationName:@"AlertNotification"];
+}
 + (instancetype)factory {
-    return [AlertNotificationFactory factoryWithNotificationName:@"AlertNotification"];
+    return [[AlertNotificationFactory alloc] init];
 }
 @end

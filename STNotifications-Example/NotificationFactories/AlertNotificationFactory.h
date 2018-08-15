@@ -10,5 +10,6 @@
 #import "Alert.h"
 
 @interface AlertNotificationFactory : STNotificationFactory <Alert *>
+- (instancetype)init;
 + (instancetype)factory;
 @end
