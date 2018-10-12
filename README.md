@@ -77,8 +77,8 @@ STNotifications is Objective-C library for Strongly Typed Notifications
   ...
   let factory = [AlertNotificationFactory new];
   let alertObserver = [factory makeObserverWithOnRecievedBlock:^(STNotification<Alert *> * _Nullable notification) {
-  NSLog(@"%@", notification.payload.message);
-  NSLog(@"%@", notification.sender);
+    NSLog(@"%@", notification.payload.message);
+    NSLog(@"%@", notification.sender);
   }];
   self.alertToken = [[NSNotificationCenter defaultCenter] stn_addNotificationObserver:alertObserver];
 ```
@@ -105,7 +105,7 @@ STNotifications is Objective-C library for Strongly Typed Notifications
 
 ```ruby
 target '<Your Target Name>' do
-    pod 'STNotifications', '~> 1.1.4'
+    pod 'STNotifications', '~> 1.1.5'
 end
 ```
 

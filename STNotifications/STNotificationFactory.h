@@ -15,11 +15,11 @@
 - (instancetype _Nullable)initWithNotificationName:(NSNotificationName __nonnull )name;
 + (instancetype _Nullable)factoryWithNotificationName:(NSNotificationName __nonnull )name;
 
-- (STNotificationObserver<__kindof PayloadType> *__nullable)makeObserverWithOnRecievedBlock:(void (^__nonnull)(STNotification<__kindof PayloadType>  * _Nullable))recievedBlock;
-- (STNotificationObserver<__kindof PayloadType> *__nonnull)makeObserverWithQueue:(NSOperationQueue *__nullable)queue
+- (STNotificationObserver<PayloadType> *__nullable)makeObserverWithOnRecievedBlock:(void (^__nonnull)(STNotification< PayloadType>  * _Nullable))recievedBlock;
+- (STNotificationObserver<PayloadType> *__nonnull)makeObserverWithQueue:(NSOperationQueue *__nullable)queue
                                                                    sender:(id __nullable)sender
-                                                          onRecievedBlock:(void (^__nonnull)(STNotification<__kindof PayloadType>  * __nullable))recievedBlock;
+                                                          onRecievedBlock:(void (^__nonnull)(STNotification< PayloadType>  * __nullable))recievedBlock;
 
-- (STNotification<__kindof PayloadType> *__nonnull)makeNotificationWithPayload:(PayloadType __nullable)payload;
-- (STNotification<__kindof PayloadType> *__nonnull)makeNotificationWithPayload:(PayloadType __nullable)payload sender:(id __nullable)sender;
+- (STNotification<PayloadType> *__nonnull)makeNotificationWithPayload:(PayloadType __nullable)payload;
+- (STNotification<PayloadType> *__nonnull)makeNotificationWithPayload:(PayloadType __nullable)payload sender:(id __nullable)sender;
 @end
