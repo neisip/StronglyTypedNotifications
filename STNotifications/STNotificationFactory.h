@@ -11,7 +11,7 @@
 #import "STNotification.h"
 
 
-@interface STNotificationFactory<PayloadType>: NSObject
+@interface STNotificationFactory<PayloadType: id>: NSObject
 - (instancetype _Nullable)initWithNotificationName:(NSNotificationName __nonnull )name;
 + (instancetype _Nullable)factoryWithNotificationName:(NSNotificationName __nonnull )name;
 

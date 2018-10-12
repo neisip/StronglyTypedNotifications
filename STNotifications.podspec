@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "STNotifications"
-  s.version      = "1.1.5"
+  s.version      = "1.1.5.1"
   s.summary      = "Tiny library for Strongly Typed Notifications in Objective-C"
 
   s.description  = <<-DESC

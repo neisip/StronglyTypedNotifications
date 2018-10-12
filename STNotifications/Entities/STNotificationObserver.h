@@ -10,7 +10,7 @@
 #import "STNotificationNameProvider.h"
 #import "STNotification.h"
 
-@interface STNotificationObserver<PayloadType> : NSObject <STNotificationNameProvider>
+@interface STNotificationObserver<PayloadType: id> : NSObject <STNotificationNameProvider>
 @property (nonatomic, strong, readonly) NSOperationQueue * __nonnull queue;
 @property (nonatomic, weak, readonly) id __nullable sender;
 @property (nonatomic, copy, readonly) void (^ __nullable onRecievedBlock)(STNotification<PayloadType> * __nullable);

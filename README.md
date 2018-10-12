@@ -105,7 +105,7 @@ STNotifications is Objective-C library for Strongly Typed Notifications
 
 ```ruby
 target '<Your Target Name>' do
-    pod 'STNotifications', '~> 1.1.5'
+    pod 'STNotifications', '~> 1.1.5.1'
 end
 ```
 
